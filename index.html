@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- с помощью этого тега мы указываем кодировку, в которой
+    пишем свой сайт, UTF-8 стандартная -->
+    <meta charset="UTF-8">
+    <title>Andrew CV</title>
+</head>
+<body>
+    <table cellspacing="20px">
+    <tr>
+        <td>
+            <img src="avatar.jpg" alt="Тут моя фотка :)" width="300"/>
+        </td>
+        <td>
+        <h1>Андрей Суслин</h1>  
+        <p><em>Мне 30 лет.</em> Я работаю на <strong>Горьковском Автомобильном Заводе.</strong></p>
+        <p>Совсем недавно я начал изучать <strong>HTML</strong> и <strong>JavaScript.</strong></p>
+        <p>Впереди у меня еще полно работы и <strong>CSS.</strong> <em><strong>Я справлюсь!</strong></em></p>
+        <p><strong>Я обязательно вкачусь!<strong/></p>
+        </td>
+    </tr>
+</table>
+    <!-- Это способ вставки картики с интрнета<img src="https://sun9-87.userapi.com/impf/c631520/v631520530/2bfe8/z2ct4OHytGU.jpg?size=420x542&quality=96&sign=9da01d2e5a940e25b7abcb04d92da9b3&type=album" alt="" width='300'/> -->
+
+    
+    
+    
+    <hr color="black"/>
+
+    <h2><strong>Мои социальные сети</strong></h2>
+    <!-- ul (unoded list) - связный тэг. если внутри ul использовать тэг li(list item)
+    то получим один элемент списка. Если его продублировать, 
+    то получим классический HTML-список. Каждый элемент с точкой -->
+    <ul type='circle'>
+        <li><a href="https://vk.com/mooreech" target="blank">ВКонтакте</a></li>
+        <li><a href="https://t.me/Panzerhalzen" target="blank">Телеграм</a></li>
+    </ul>
+
+    <h2><strong>Мое хобби</strong></h2>
+    <ol type='I'>
+        <!-- ol - аналог ul, но каждый элемент с цифрой  -->
+        <li>3D печать.</li>
+        <li>Плавание в бассейне.</li>
+    </ol>
+<hr color="black"/>
+    <h2><strong>Опыт работы</strong></h2>
+    
+    <!-- tr - строки таблицы, td - колонки аблицы -->
+    <table bgcolor="white" border="1" cellpadding="10%">
+        <!-- у таблицы есть свой "скелет", очень похож на скелет html документа -->
+        <thead bgcolor="#3f87a6">
+            <tr>
+                <!-- th - заголовок -->
+                <th>1</th> 
+                <th>2</th>
+                <th>3</th>
+            </tr>
+        </thead>
+        <tbody bgcolor="#e4f0f5">
+            <tr align="center">
+                <td><strong>Компания<strong/></td>
+                <td><strong>Должность<strong/></td>
+                <td><strong>Годы работы<strong/></td>
+            </tr>
+            <tr align="center">
+                <td>ООО "Нижегородские Моторы</td>
+                <td>Оператор станков с ЧПУ</td>
+                <td>2011-2013</td>
+            </tr>
+            <tr align="center">
+                <td></td>
+                <td>Наладчик станков с ЧПУ</td>
+                <td>2013-2019</td>
+            </tr>
+            <tr align="center">
+                <td></td>
+                <td>Бригадир на участках основного произвосдтва</td>
+                <td>2019-2019</td>
+            </tr>
+            <tr align="center">
+                <td></td>
+                <td>Наладчик станков с ЧПУ</td>
+                <td>2019-н.в</td>
+            </tr>
+            
+        </tbody>
+        <tfoot></tfoot>
+        
+        
+    </table>
+
+    <hr color="black"/>
+
+    <h2>YouTube Курсы </h2>
+    <a href="youtube.html" target="_black">Посмотреть список</a>
+
+    <hr color="black"/>
+
+    <h2><strong>Связаться со мной</strong></h2>
+    <form action="/">
+        <!-- Если указать aаттрибут name у лейбла и тот же id name у инпут, то при клике
+        на "Ваше имя" курсор автоматически встанет в поле ввода  -->
+        
+            <label for="name">Ваше имя</label>
+            <input type="text" id="name"
+            placeholder="Введите Ваше имя">
+         
+        <br>
+        
+            <label for="email">Ваш e-mail</label>
+            <input type="email" id="email"
+            placeholder="Введите e-mail">
+
+        <br>
+
+        <label for="text">Ваше сообщение</label>
+        <br>
+        <textarea id="text" rows="3" cols="30"></textarea>
+        
+        <br>
+        
+            <input type="submit" value="Связаться!">
+        
+        
+
+    </form>
+
+</body>
+</html>
