@@ -5,126 +5,158 @@
     пишем свой сайт, UTF-8 стандартная -->
     <meta charset="UTF-8">
     <title>Andrew CV</title>
+    <!-- <style>
+        /* Это тоже Инлайн способ CSS */
+           body {
+            background: silver;
+           } 
+
+           h1 {
+               color: #16157a;
+           }
+    </style> -->
+
+    <!-- Подключанем внешний css ,казывая адрес и тип файла в rel -->
+    <link href='styles.css' rel='stylesheet'/>
+    
 </head>
 <body>
-    <table cellspacing="20px">
-    <tr>
-        <td>
-            <img src="avatar.jpg" alt="Тут моя фотка :)" width="300"/>
-        </td>
-        <td>
-        <h1>Андрей Суслин</h1>  
-        <p><em>Мне 30 лет.</em> Я работаю на <strong>Горьковском Автомобильном Заводе.</strong></p>
-        <p>Совсем недавно я начал изучать <strong>HTML</strong> и <strong>JavaScript.</strong></p>
-        <p>Впереди у меня еще полно работы и <strong>CSS.</strong> <em><strong>Я справлюсь!</strong></em></p>
-        <p><strong>Я обязательно вкачусь!<strong/></p>
-        </td>
-    </tr>
-</table>
-    <!-- Это способ вставки картики с интрнета<img src="https://sun9-87.userapi.com/impf/c631520/v631520530/2bfe8/z2ct4OHytGU.jpg?size=420x542&quality=96&sign=9da01d2e5a940e25b7abcb04d92da9b3&type=album" alt="" width='300'/> -->
+    <div class="container">
+        <div class='info'>
+            <!-- div - это блочный элемент, который создает свой собственный блок. И мы сгруппировали эти элементы -->
+            <img src="avatar.jpg" alt="Тут моя фотка :)" class="avatar"/>
 
-    
-    
-    
-    <hr color="black"/>
+            <div class='info-text'>        
+                <h1>Андрей Суслин</h1>
+                    <p>Мне 30 лет. Я работаю на <strong>Горьковском Автомобильном Заводе.</strong></p>
+                    <p>Совсем недавно я начал изучать <strong>HTML</strong> и <strong>JavaScript.</strong></p>
+                    <p>Впереди у меня еще полно работы и <strong>CSS.</strong> <strong>Я справлюсь!</strong></p>
+                    <p><strong>Я обязательно вкачусь! :D<strong/></p>
 
-    <h2><strong>Мои социальные сети</strong></h2>
-    <!-- ul (unoded list) - связный тэг. если внутри ul использовать тэг li(list item)
-    то получим один элемент списка. Если его продублировать, 
-    то получим классический HTML-список. Каждый элемент с точкой -->
-    <ul type='circle'>
-        <li><a href="https://vk.com/mooreech" target="blank">ВКонтакте</a></li>
-        <li><a href="https://t.me/Panzerhalzen" target="blank">Телеграм</a></li>
-    </ul>
-
-    <h2><strong>Мое хобби</strong></h2>
-    <ol type='I'>
-        <!-- ol - аналог ul, но каждый элемент с цифрой  -->
-        <li>3D печать.</li>
-        <li>Плавание в бассейне.</li>
-    </ol>
-<hr color="black"/>
-    <h2><strong>Опыт работы</strong></h2>
-    
-    <!-- tr - строки таблицы, td - колонки аблицы -->
-    <table bgcolor="white" border="1" cellpadding="10%">
-        <!-- у таблицы есть свой "скелет", очень похож на скелет html документа -->
-        <thead bgcolor="#3f87a6">
-            <tr>
-                <!-- th - заголовок -->
-                <th>1</th> 
-                <th>2</th>
-                <th>3</th>
-            </tr>
-        </thead>
-        <tbody bgcolor="#e4f0f5">
-            <tr align="center">
-                <td><strong>Компания<strong/></td>
-                <td><strong>Должность<strong/></td>
-                <td><strong>Годы работы<strong/></td>
-            </tr>
-            <tr align="center">
-                <td>ООО "Нижегородские Моторы</td>
-                <td>Оператор станков с ЧПУ</td>
-                <td>2011-2013</td>
-            </tr>
-            <tr align="center">
-                <td></td>
-                <td>Наладчик станков с ЧПУ</td>
-                <td>2013-2019</td>
-            </tr>
-            <tr align="center">
-                <td></td>
-                <td>Бригадир на участках основного произвосдтва</td>
-                <td>2019-2019</td>
-            </tr>
-            <tr align="center">
-                <td></td>
-                <td>Наладчик станков с ЧПУ</td>
-                <td>2019-н.в</td>
-            </tr>
+                <!-- Это способ вставки картики с интрнета<img src="https://sun9-87.userapi.com/impf/c631520/v631520530/2bfe8/z2ct4OHytGU.jpg?size=420x542&quality=96&sign=9da01d2e5a940e25b7abcb04d92da9b3&type=album" alt="" width='300'/> -->
+                <h4 class='link'><strong>Мои социальные сети</strong></h4>
+                <!-- ul (unoded list) - связный тэг. если внутри ul использовать тэг li(list item)
+                то получим один элемент списка. Если его продублировать,
+                то получим классический HTML-список. Каждый элемент с точкой -->
+                
+                    <a href="https://vk.com/mooreech" target="blank">ВКонтакте</a>
+                    |
+                    <a href="https://t.me/Panzerhalzen" target="blank">Телеграм</a>
+            </div>
             
-        </tbody>
-        <tfoot></tfoot>
-        
-        
-    </table>
+        </div>
 
-    <hr color="black"/>
+        <div class='card bg-yellow' >
+            <h2><strong>Мое хобби</strong></h2>
+            <ol class='list'>
+                <!-- ol - аналог ul, но каждый элемент с цифрой  -->
+                <li>3D печать.</li>
+                <li>Плавание в бассейне.</li>
+            </ol>
+        </div>
 
-    <h2>YouTube Курсы </h2>
-    <a href="youtube.html" target="_black">Посмотреть список</a>
+        <div class="card bg-green">
+            <h2 class='tablehead'><strong>Опыт работы</strong></h2>
 
-    <hr color="black"/>
+            <!-- tr - строки таблицы, td - колонки аблицы -->
+            <table class='table'>
+                <!-- у таблицы есть свой "скелет", очень похож на скелет html документа -->
+                <thead>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>ООО "Нижегородские Моторы"</td>
+                        <td>Оператор станков с ЧПУ</td>
+                        <td>2011-2013</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Наладчик станков с ЧПУ</td>
+                        <td>2013-2019</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Бригадир на участках основного произвосдтва</td>
+                        <td>2019-2019</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Наладчик станков с ЧПУ</td>
+                        <td>2019-н.в</td>
+                    </tr>
 
-    <h2><strong>Связаться со мной</strong></h2>
-    <form action="/">
-        <!-- Если указать aаттрибут name у лейбла и тот же id name у инпут, то при клике
-        на "Ваше имя" курсор автоматически встанет в поле ввода  -->
+                </tbody>
+                <tfoot></tfoot>
+            </table>
+        </div>       
+
+        <div class="card bg-red">
+            <h2>YouTube Курсы </h2>
+                <ul class='link-list'>
+                    <li>
+                        <a href="https://www.youtube.com/channel/UCg8ss4xW9jASrqWGP30jXiw" target="_blank">YouTube Владилен Минин</a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/watch?v=SpCUuyZZTp8" target='_blank'>CSS для начинающих</a>
+                    </li>
+                </ul>
+        </div>
         
-            <label for="name">Ваше имя</label>
-            <input type="text" id="name"
-            placeholder="Введите Ваше имя">
-         
-        <br>
-        
-            <label for="email">Ваш e-mail</label>
-            <input type="email" id="email"
-            placeholder="Введите e-mail">
+        <div class="contact">
+            <h2><strong>Связаться со мной</strong></h2>
+            <form action="/">
+                <div class="row">
+                    <div class='form-group'>
+                        <!-- Если указать aттрибут name у лейбла и тот же id name у инпут, то при клике
+                        на "Ваше имя" курсор автоматически встанет в поле ввода  -->
 
-        <br>
+                        <label for="name">Ваше имя</label>
+                        <input type="text" id="name"
+                            placeholder="Введите Ваше имя">
+                    </div>
 
-        <label for="text">Ваше сообщение</label>
-        <br>
-        <textarea id="text" rows="3" cols="30"></textarea>
-        
-        <br>
-        
-            <input type="submit" value="Связаться!">
-        
-        
+                    <div class='form-group'>
+                        <label for="email">Ваш e-mail</label>
+                        <input type="email" id="email"
+                            placeholder="Введите e-mail">
+                    </div>
+                </div>
 
-    </form>
+                <div class='form-group'>
+                    <label for="text">Ваше сообщение</label>
+                    <br>
+                    <textarea id="text" rows="3" cols="30"></textarea>
+                </div>
 
+                
+                <input class='btn' type="submit" value="Связаться!">
+                
+            </form>
+        <!-- </div>
+        <div class="position">
+            <div class="box">
+                <h3 class='naviPos'>Навигация</h3>
+            </div>
+        </div> -->
+
+
+            <!-- <div class='box-model'>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+
+        <div style='margin-bottom: 500px'></div> -->
+    </div>
+
+
+    
 </body>
 </html>
+
+
+<!-- Способы подключения CSS
+1. Инлайн стили - описываем CSS прямо в html. Для этого у каждого тега
+есть спец атрибут style='тут любые CSS свойства для нашей страницы'
+2. Подключение доп файла с CSS -->

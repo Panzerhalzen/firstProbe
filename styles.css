@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/* * { * - обращение к овсем элементам на странице
+    padding: 0;
+    margin: 0;
+} */
+
+body {
+    background-color: #f1f1f1;
+    color: #0f141e;
+    font-size: 18px;
+    font-weight: bold; 
+    /* Все, что до 500, - обычная жирность. Шрифтов много, для некоторых 
+    значиения до 500 - заметны. В основном два значения 
+    bold - жирный, normal - обычный */
+
+    /* font-family: 'Roboto', sans-serif; */
+    /* Подключили внешний шрифт, который нашли в инете Google Fonts. Данный шрифт - Roboto */
+    
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    /* Первое - по умолчанию, то, что мы хотим видеть. Если в браузере нет подходящего шрифта, то следующий и т.д. Если нет нужного шрифта, то он выбирает семейство. Если нет, то балбла */
+
+    /* В CSS можно объединять свойства. Сейчас у нас три свойства, отвечающие за шрифт. Можно объединить в одно свойство font: */
+
+    /* font: normal 18px 'Roboto', sans-serif */
+
+    /* Дананя запись идентична
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif; */ 
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+
+/* a:hover - состояние a, при котором на него наведена мышка. Когда на ссылку наведена мышь, происходит что-то */
+a:hover{
+    text-decoration: underline;
+}
+
+a:active {
+    color: blue;
+}
+
+/* a:visited {
+    color: grey;
+} */
+
+/* Стилизуем картинку. Нам необходимо получить ее селектор. Для CSS рекомендуют классы. Чтобы обратиться к классу пишем его имя и перед ним точку. Вместо селектора class можно написать селектор id. По правилам html селектор id должен быть УНИКАЛЬНЫМ, классы же могут повторяться. Если же мы хотим работать с id, то вместо . перед именем ставим #. #avatar */
+
+.avatar {
+    /* Считается хорошим тоном ширину задавать не в html, а в CSS */
+    width: 350px;
+    border-radius: 30px; /* Это скругления по углам, если 50% - картинка получается круглая */
+    box-shadow: 5px 5px 14px rgba(0, 0, 0, 0.25); /* тень вокруг картинки */
+
+}
+
+/*выбрали класс info, p говорит о том, что нас интересуют все вложенные параграфы */
+
+.info {
+    margin-bottom: 20px;
+    display: flex;
+}
+
+@media (max-width: 700px) {
+    .info {
+        display: block;
+        text-align: center;
+    }
+}
+
+.info-text {
+    margin-left: 40px;
+}
+
+.info-text h4 {
+    margin-bottom: 10px;
+}
+
+.info p { 
+    color: #86898f;
+    margin: 0;
+    font-style: italic;
+    /* font-style: italic - весь текст в наклонном формате */
+    font-weight: normal;
+    /* font-style: bold - все параграфы bold */
+    text-decoration: none;
+    /* text-decortaion: underline - подчеркивание текста, line-throught - зачеркнутый текст */
+    text-transform: none; 
+    /* text-transform: lowercase - весь текст маленькими буквами, uppercase - все буквы большие, capitalize - каждое слово с большой буквы */
+    letter-spacing: 1px; 
+    /* letter-spacing: 5px - колв-во пикселей между каждым символом */
+    word-spacing: 1px;
+    /* word-spacing: 4px - количество пикселей между словами */
+}
+
+
+/* BOX MODEL */
+/* padding - внутренний отступ в самом блоке */
+/* border - ширина границы, стиль границы, цвет. В таком формате */
+/* margin - внешний отступ */
+.container {
+    padding-top: 50px;
+    max-width: 1000px;
+    /* max-width - ширина, которую будет занимать наш сайт (все, что в блоке div с классом container) Приставка max- говорит о том, что если ширина экрана будет меньше 750px, то сайт будет скукоживаться, чтобы не занимать больше одного экрана в ширину. */
+    margin: auto;
+    
+}
+
+/* .social {
+    border-radius: 15px;
+    background-color: orange; */
+    /* padding: 15px; - отступ везде во 15px */
+    /* padding: 15px 40px; - отступ сверху и снизу по 15, справа и слева по 40. Значения идут по часовой стрелке начиная сверху  */
+    /* padding: 15px 20px;
+    margin: 5px; */
+    /* border позволяет нам играться границами */
+    /* border: 5px solid blue;
+    border-bottom-style: groove;
+} */
+
+ /* .box-model div { */
+    /* такое написание div говорит о том, что эти стили будут применяться КО ВСЕМ div, даже вложенным. Если написать .box-model > div , то стили будут применяться только к дочерним div, к вложенным в дочерние не будут. */
+    /* Размерность border и margin НЕ ВХОДИТ в полную размерность элемента. Тут мы задали 4 элемента с шириной в 25%, которые занимают 100% ширины. Добавили границу и элементы заняли две строки, т.к. выехали за 100% ширины. Как сделать, чтобы все элементы, независимо от border и margin находились на одном уровне? */
+
+/* border: 4px solid red;
+float: left;
+background: black;
+height: 200px;
+width: 25%; */
+
+    /* для этого используем св-во box-sizing. Благодаря ему эти 25% учитывают в себе границы */
+/* box-sizing: border-box;
+} */
+
+.bg-yellow {
+    background: #fff9dc;
+}
+
+.bg-green {
+    background: #e5ffe7;
+}
+
+.bg-red {
+    background: #ffe5e5;
+}
+
+
+.card {
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+}
+
+.card h2 {
+    margin-bottom: 10px;
+}
+
+.list {
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-right: 20px;
+    padding-left: 20px;
+    /* list-style: none */
+}
+
+.list li {
+    color: #86898f;
+    margin-bottom: 10px;
+    /* border-bottom: 1px solid grey; */
+}
+
+.tablehead  {
+    text-align: center;
+}
+
+.table {
+    width: 100%;
+}
+
+.table td {
+    padding-bottom: 10px;
+}
+
+.table td:nth-child(2), 
+.table td:nth-child(3) { /*:nth-child() - псевдо-селектор. в скобках указывается порядковый номер элемента, который хотим стилизовать */
+    color: #86898f;
+}
+
+/* .table tr:nth-child(odd) {
+    background: red;
+} */
+
+.link-list  {
+    list-style: square;
+    padding: 0;
+}
+
+.link-list li {
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #ccc;
+}
+
+.contact h2 {
+    text-align: center;
+
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    color: #86898f;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    box-sizing: border-box;
+    border: none;
+    background: transparent;
+    /* transparent - прозрачный бэкграунд */
+    border-bottom: 1px solid #ccc;
+    color: black;
+    padding: 15px 0 10px;
+    outline: none;
+    /* outline - убираем кайму вокруг поля ввода, когда курсор в нем */
+    font-family: inherit; 
+    /* inherit - текст наследует стиль */
+}
+
+.row {
+    display: flex;
+    /* display: none - убираем визуально эти элементы */
+    margin-bottom: 20px;
+    }
+
+    .row > .form-group {
+        width: 50%;
+        margin-right: 20px;
+    }
+
+    .row > .form-group:last-child {
+        margin-right: 0;
+    }
+
+    .btn {
+        background: black;
+        padding: 15px 20px;
+        color: white;
+        border: none;
+        font-family: inherit;
+        cursor: pointer;        
+    }
+
+    .btn:hover {
+        opacity: 0.9;
+    }
+
+
+    
+
+    /* position */
+
+    /* .position {
+        border: 4px solid black;
+        margin-top: 40px;
+        padding: 20px;
+        position: relative;
+        height: 300px;
+    }
+
+    .box {
+        width: 100%;
+        height: 50px;
+        background: lightcoral;
+        position: fixed;
+        top: 0;
+        left: 0;
+        /* border-radius: 50%; 
+    } */
+
+    /* .naviPos {
+        text-align: center;
+        margin: 10px;
+        font-style: italic;
+    } */
